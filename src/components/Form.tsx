@@ -19,27 +19,32 @@ export default function Form() {
             <p>Select your subscription plan</p>
           </div>
           <Subscription />
-          <div className="fee-structure">
-            <div>
-              <span className="subscription-fee">Subscription Fee</span>
-              <span className="subscription-fee"></span>
+          <div className="order-summary">
+            <div className="subscription-fee-wrapper">
+              <span className="subscription-fee-p">Subscription Fee</span>
+              <span className="subscription-fee">18500</span>
             </div>
-            <div className="limited-time">
-              <div>
-                <span>Limited time offer</span>
-                <span>-18401</span>
+            <div className="limited-time-wrapper">
+              <div className="limited-time-header">
+                <span className="limited-time-text">Limited time offer</span>
+                <span className="limited-time-price">-18401</span>
               </div>
-              <div>
-                <span>Offer calid till 25th March 2023</span>
+              <div className="offer-validy-wrapper">
+                <img src="Icon-Clock.svg" />
+                <span className="offer-validy-p">Offer calid till 25th March 2023</span>
               </div>
             </div>
-            <div>
-              <span>Total (Incl. of 18% GST)</span>
-              <span>149</span>
+            <div className="order-total-wrapper">
+              <span className="order-total-text"><b>Total</b> (Incl. of 18% GST)</span>
+              <span className="order-total-price">149</span>
             </div>
           </div>
-          <div></div>
+          <div className="payment-action-buttons">
+            <button className="cancel-button">CANCEL</button>
+            <button className="proceed-button">PROCEED TO PAY</button>
+          </div>
         </form>
+        <img src="Razorpay Icon.svg" className="razorpay-img"/>
       </div>
     </div>
   );

@@ -10,13 +10,12 @@
   .navbar {
     display: flex;
     align-items: center;
-    padding: 13.5px 106.5px;
+    padding: 14px 106px;
     .navigation-links {
       width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      height: 100%;
       ul {
         list-style-type: none;
       }
@@ -61,13 +60,25 @@
         }
       }
     }
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all ease ease-in-out;
+        transition: all ease ease-in-out;
+        background-color: #3c4852;
+      }
+    }
   }
 
   .course-container {
     background-image: url(Background.jpg);
     background-size: cover;
     display: flex;
-    width: 100%;
     height: 93vh;
     .marketing-content {
       padding: 70px 0px 0px 144px;
@@ -79,7 +90,7 @@
     }
     .form-container {
       background-color: #fff;
-      margin: 70px 102px 57px 102px;
+      margin: 50px 102px;
       font-family: "Inter", sans-serif;
       font-family: "Poppins", sans-serif;
       font-family: "Raleway", sans-serif;
@@ -96,6 +107,7 @@
           font-weight: 400;
           font-size: 16px;
           line-height: 19px;
+          padding: 0px 100px;
           .sign-up,
           .subscribe {
             display: flex;
@@ -121,23 +133,24 @@
             color: #fff;
           }
         }
-        .select-plan-p {
-          font-size: 24px;
-          font-weight: 600;
-          color: #3c4852;
-          margin: 28px 0px;
-          text-align: center;
-        }
-        .subscription-plans-wrapper {
+        .subscription-plans-form {
+          width: 100%;
+          .select-plan-p {
+            font-size: 24px;
+            font-weight: 600;
+            color: #3c4852;
+            margin: 28px 0px;
+            text-align: center;
+          }
           .subscription-plans {
             position: relative;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 3%;
+            padding: 16px;
             border-radius: 4px;
             background: #d7eddd;
-            border: 2px solid #47BA68;
+            border: 2px solid #47ba68;
             cursor: pointer;
             .recommended-plan {
               position: absolute;
@@ -152,12 +165,402 @@
               text-align: center;
               line-height: 120%;
             }
-            .subscription-duration label {
-              font-weight: 600;
-              font-size: 16px;
-              line-height: 120%;
+            .subscription-duration {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              label {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 120%;
+                color: #3c4852;
+              }
+              input {
+                width: 27px;
+                height: 27px;
+              }
+            }
+            .payment-details {
+              .total {
+                font-weight: 400;
+                font-size: 12px;
+                color: #3c4852;
+              }
+              .total-price {
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 120%;
+                margin-left: 8px;
+              }
+              .price-per-month {
+                font-weight: 400;
+                font-size: 12px;
+                color: #3c4852;
+                margin-left: 20px;
+              }
+              .per-month {
+                font-weight: 500;
+                font-size: 10px;
+                line-height: 120%;
+                color: #bebebe;
+                margin-left: 8px;
+              }
+            }
+          }
+          .order-summary {
+            margin: 28px 0px;
+            border-top: 2px solid #bebebe;
+            .subscription-fee-wrapper {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 18.8px 24px;
+              .subscription-fee-p {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 120%;
+                color: #3c4852;
+              }
+              .subscription-fee {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 100%;
+                color: #3c4852;
+              }
+            }
+            .limited-time-wrapper {
+              padding: 14px 24px;
+              box-sizing: border-box;
+              background: linear-gradient(
+                135deg,
+                rgba(222, 67, 19, 0.2) 0%,
+                rgba(222, 67, 19, 0.2) 0.75%,
+                rgba(222, 67, 19, 0.2) 2.92%,
+                rgba(222, 68, 20, 0.2) 6.37%,
+                rgba(223, 69, 21, 0.2) 10.97%,
+                rgba(223, 72, 22, 0.2) 16.59%,
+                rgba(224, 75, 24, 0.2) 23.1%,
+                rgba(225, 80, 27, 0.2) 30.37%,
+                rgba(227, 86, 31, 0.2) 38.27%,
+                rgba(229, 94, 36, 0.2) 46.66%,
+                rgba(231, 104, 43, 0.2) 55.41%,
+                rgba(235, 117, 51, 0.2) 64.39%,
+                rgba(238, 132, 60, 0.2) 73.47%,
+                rgba(243, 149, 71, 0.2) 82.52%,
+                rgba(248, 169, 84, 0.2) 91.41%,
+                rgba(254, 193, 99, 0.2) 100%
+              );
+              border-radius: 8px;
+              .limited-time-header {
+                display: flex;
+                justify-content: space-between;
+                .limited-time-text {
+                  font-weight: 600;
+                  font-size: 16px;
+                  line-height: 120%;
+                  color: #de4313;
+                }
+                .limited-time-price {
+                  font-weight: 600;
+                  font-size: 16px;
+                  line-height: 100%;
+                  color: #3c4852;
+                }
+              }
+              .offer-validy-wrapper {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 8px 0px;
+                .offer-validy-p {
+                  font-weight: 400;
+                  font-size: 14px;
+                  line-height: 120%;
+                  color: #de4313;
+                }
+              }
+            }
+            .order-total-wrapper {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 18.8px 24px;
+              .order-total-text {
+                font-size: 16px;
+                line-height: 120%;
+                color: #3c4852;
+              }
+              .order-total-price {
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 100%;
+                letter-spacing: 0.03em;
+                color: #3c4852;
+              }
+            }
+          }
+        }
+        .payment-action-buttons {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 10px;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 19px;
+          border-radius: 4px;
+          .cancel-button {
+            width: 100%;
+            padding: 15px 0px;
+            background: #fff;
+            border: 0.5px solid #f77171;
+            border-radius: 4px;
+            color: #f77171;
+          }
+          .proceed-button {
+            width: 100%;
+            padding: 15px 0px;
+            background: #47ba68;
+            border: none;
+            border-radius: 4px;
+            color: #ffffff;
+          }
+        }
+        .razorpay-img {
+            padding-top: 28px;
+            align-self: flex-start;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .App {
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      gap: 0;
+      padding: 4% 6%;
+      .edyoda-logo {
+        width: 140px;
+      }
+      .navigation-links {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        margin: 0px;
+        opacity: 0;
+        top: 92px;
+        right: 0;
+        background-color: #2b6a97;
+        text-align: center;
+        gap: 0px;
+        color: #fff;
+        li {
+          padding: 10px 0px;
+          font-size: 16px;
+        }
+        .navigation-links-left {
+          width: 100%;
+          flex-direction: column;
+          align-items: center;
+          padding: 0;
+          gap: 0;
+          li {
+            padding: 15px 0px;
+            align-self: center;
+            justify-content: center;
+            width: 100%;
+            border-bottom: #f3f7f9 solid 1px;
+          }
+        }
+        .navigation-links-right {
+          width: 100%;
+          flex-direction: column;
+          align-items: center;
+          padding: 0px;
+          gap: 0px;
+          li {
+            padding: 15px 0px;
+            align-self: center;
+            justify-content: center;
+            width: 100%;
+            border-bottom: #f3f7f9 solid 1px;
+          }
+        }
+      }
+      .navigation-links.active {
+        opacity: 1;
+      }
+      .hamburger {
+        display: block;
+        padding: 12px;
+      }
+      .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+      .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+      .join-button {
+        padding: 0.5em 2em;
+        box-shadow: none;
+        border: none;
+        border-radius: 35px;
+        background: rgb(0, 150, 255);
+        background: linear-gradient(
+          90deg,
+          rgba(0, 150, 255, 1) 0%,
+          rgba(0, 72, 255, 1) 100%
+        );
+        color: #fff;
+        line-height: 19px;
+        font-family: "Inter", sans-serif;
+        font-family: "Poppins", sans-serif;
+        font-family: "Raleway", sans-serif;
+      }
+    }
+    .course-container {
+      background-image: url(Background.jpg);
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 93vh;
+      .marketing-content {
+        padding: 10px;
+        color: #fff;
+        .marketing-content-heading {
+          font-size: 30px;
+          font-weight: 600;
+        }
+      }
+      .form-container {
+        background-color: #fff;
+        margin: 0;
+        width: 100%;
+        font-family: "Inter", sans-serif;
+        font-family: "Poppins", sans-serif;
+        font-family: "Raleway", sans-serif;
+        font-family: "Roboto", sans-serif;
+        .form-wrapper {
+          display: flex;
+          padding: 32px 24px;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          .form-top-actions {
+            display: flex;
+            gap: 150px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            padding: 0px 100px;
+            .sign-up,
+            .subscribe {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              gap: 5px;
+              width: 60px;
+              font-weight: 400;
               color: #3c4852;
-              padding: 10px;
+            }
+            .one,
+            .two {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 10px 13px;
+              background-color: #0096ff;
+              border-radius: 50%;
+              font-weight: 600;
+              font-size: 24px;
+              text-align: center;
+              color: #fff;
+            }
+          }
+          .select-plan-p {
+            font-size: 24px;
+            font-weight: 600;
+            color: #3c4852;
+            margin: 28px 0px;
+            text-align: center;
+          }
+          .subscription-plans-form {
+            width: 100%;
+            .subscription-plans {
+              position: relative;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 16px;
+              border-radius: 4px;
+              background: #d7eddd;
+              border: 2px solid #47ba68;
+              cursor: pointer;
+              .recommended-plan {
+                position: absolute;
+                top: 0;
+                left: 62px;
+                background: #47ba68;
+                border-radius: 0px 0px 4px 4px;
+                font-weight: 500;
+                font-size: 12px;
+                color: #fff;
+                padding: 1px 25px;
+                text-align: center;
+                line-height: 120%;
+              }
+              .subscription-duration {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                label {
+                  font-weight: 600;
+                  font-size: 16px;
+                  line-height: 120%;
+                  color: #3c4852;
+                }
+                input {
+                  width: 27px;
+                  height: 27px;
+                }
+              }
+            }
+          }
+          .payment-action-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 19px;
+            border-radius: 4px;
+            .cancel-button {
+              width: 100%;
+              padding: 15px 0px;
+              background: #fff;
+              border: 0.5px solid #f77171;
+              border-radius: 4px;
+              color: #f77171;
+            }
+            .proceed-button {
+              width: 100%;
+              padding: 15px 0px;
+              background: #47ba68;
+              border: none;
+              border-radius: 4px;
+              color: #ffffff;
             }
           }
         }
