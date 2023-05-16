@@ -1,5 +1,4 @@
 import { useState } from "react";
-import EDYODA from "../Icons/EDYODA";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { AiOutlineSearch } from "react-icons/ai";
 
@@ -14,7 +13,7 @@ export default function Navbar() {
     <div>
       <header className="header">
         <nav className="navbar">
-          <img src="EDYODA.png" className="edyoda-logo" />
+          <img src="EDYODA.png" className="edyoda-logo" alt="Edyoda logo"/>
           <div
             className={`navigation-links ${hamburgerActive ? "active" : ""}`}
           >

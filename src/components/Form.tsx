@@ -30,7 +30,7 @@ export default function Form() {
                 <span className="limited-time-price">-18401</span>
               </div>
               <div className="offer-validy-wrapper">
-                <img src="Icon-Clock.svg" />
+                <img src="Icon-Clock.svg" alt="clock icon"/>
                 <span className="offer-validy-p">Offer calid till 25th March 2023</span>
               </div>
             </div>
@@ -44,7 +44,7 @@ export default function Form() {
             <button className="proceed-button">PROCEED TO PAY</button>
           </div>
         </form>
-        <img src="Razorpay Icon.svg" className="razorpay-img"/>
+        <img src="Razorpay Icon.svg" className="razorpay-img" alt="Razorpay icon"/>
       </div>
     </div>
   );
