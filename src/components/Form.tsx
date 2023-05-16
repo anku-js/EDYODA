@@ -21,11 +21,13 @@ export default function Form() {
           <div className="form-header">
             <p>Select your subscription plan</p>
           </div>
-          {subscriptionPlan.map(({ month, totalPrice, perMonthPrice }) => (
+          {subscriptionPlan.map(({ month, totalPrice, perMonthPrice, activePlan, selectedPlan }) => (
             <Subscription
               month={month}
               totalPrice={totalPrice}
               perMonthPrice={perMonthPrice}
+              activePlan={activePlan}
+              selectedPlan={selectedPlan}
             />
           ))}
           <div className="order-summary">

@@ -1,16 +1,24 @@
 import { useState } from "react";
 
-export default function Subscription({ month, totalPrice, perMonthPrice }) {
-  const [planSelected, setPlanSelected] = useState(false);
+export default function Subscription({
+  month,
+  totalPrice,
+  perMonthPrice,
+  activePlan,
+  selectedPlan,
+}) {
+  const [planSelected, setPlanSelected] = useState(selectedPlan);
 
   function handleClick() {
-    setPlanSelected(true);
+    setPlanSelected(planSelected => !planSelected);
   }
 
   return (
     <div className="subscription-plans-wrapper">
       <div
-        className={`subscription-plans ${planSelected ? "active" : ""}`}
+        className={`subscription-plans ${planSelected ? "active" : ""} ${
+          activePlan ? "" : "deactive"
+        }`}
         onClick={handleClick}
       >
         {totalPrice == 179 ? (
@@ -19,12 +27,15 @@ export default function Subscription({ month, totalPrice, perMonthPrice }) {
           ""
         )}
         <div className="subscription-duration">
-          {!planSelected ? (
-            <input
-              type="radio"
-              for="months-plan"
-              name="months-plan"
-              vlaue="months-plan"
+          {!activePlan ? (
+            <img
+              src="deactive.png"
+              alt="Green circle with a tick mark inside it"
+            />
+          ) : !planSelected ? (
+            <img
+              src="empty-tick.png"
+              alt="Green circle with a tick mark inside it"
             />
           ) : (
             <img
@@ -32,6 +43,7 @@ export default function Subscription({ month, totalPrice, perMonthPrice }) {
               alt="Green circle with a tick mark inside it"
             />
           )}
+          {activePlan ? "" : <div className="expired-plan">Offer expired</div>}
           <label id="months-plan">{month} Months Subscription</label>
         </div>
         <div className="payment-details">

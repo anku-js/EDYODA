@@ -6,7 +6,7 @@ export default {
     { "month": "3", "totalPrice": "99", "perMonthPrice": "33", "activePlan" : true, "selectedPlan" : false }
   ],
   "heroText" : {
-    "slashedPrice" : "₹ 18,500",
+    "slashedPrice" : "18,500",
     "currentPrice" : "₹ 99"
   }
 }

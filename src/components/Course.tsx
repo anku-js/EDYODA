@@ -10,7 +10,7 @@ export default function Course() {
           <div className="marketing-content-heading">
             <p>
               Access curated courses worth{" "}
-              <span className="slashedPrice">{slashedPrice}</span> at just{" "}
+              <span className="slashedPrice">₹ <s>{slashedPrice}</s></span> at just{" "}
               <span className="currentPrice">{currentPrice}</span> per year!
             </p>
           </div>
