@@ -1,6 +1,9 @@
 import Subscription from "./Subscription";
+import content from "../../content";
 
 export default function Form() {
+  const { subscriptionPlan } = content;
+  console.log(subscriptionPlan);
   return (
     <div className="form-container">
       <div className="form-wrapper">
@@ -15,28 +18,38 @@ export default function Form() {
           </div>
         </div>
         <form className="subscription-plans-form">
-          <div className="select-plan-p">
+          <div className="form-header">
             <p>Select your subscription plan</p>
           </div>
-          <Subscription />
+          {subscriptionPlan.map(({ month, totalPrice, perMonthPrice }) => (
+            <Subscription
+              month={month}
+              totalPrice={totalPrice}
+              perMonthPrice={perMonthPrice}
+            />
+          ))}
           <div className="order-summary">
             <div className="subscription-fee-wrapper">
               <span className="subscription-fee-p">Subscription Fee</span>
-              <span className="subscription-fee">18500</span>
+              <span className="subscription-fee">₹18500</span>
             </div>
             <div className="limited-time-wrapper">
               <div className="limited-time-header">
                 <span className="limited-time-text">Limited time offer</span>
-                <span className="limited-time-price">-18401</span>
+                <span className="limited-time-price">-₹18401</span>
               </div>
               <div className="offer-validy-wrapper">
-                <img src="Icon-Clock.svg" alt="clock icon"/>
-                <span className="offer-validy-p">Offer calid till 25th March 2023</span>
+                <img src="Icon-Clock.svg" alt="clock icon" />
+                <span className="offer-validy-p">
+                  Offer calid till 25th March 2023
+                </span>
               </div>
             </div>
             <div className="order-total-wrapper">
-              <span className="order-total-text"><b>Total</b> (Incl. of 18% GST)</span>
-              <span className="order-total-price">149</span>
+              <span className="order-total-text">
+                <b>Total</b> (Incl. of 18% GST)
+              </span>
+              <span className="order-total-price">₹149</span>
             </div>
           </div>
           <div className="payment-action-buttons">
@@ -44,7 +57,11 @@ export default function Form() {
             <button className="proceed-button">PROCEED TO PAY</button>
           </div>
         </form>
-        <img src="Razorpay Icon.svg" className="razorpay-img" alt="Razorpay icon"/>
+        <img
+          src="Razorpay Icon.svg"
+          className="razorpay-img"
+          alt="Razorpay icon"
+        />
       </div>
     </div>
   );
