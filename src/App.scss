@@ -69,15 +69,17 @@
   }
 
   .payments-page {
-    background-image: url(./assets/Background.jpg);
+    background-image: url("./assets/Back Ground.webp");
+    background-color: #0d1c27;
     background-size: cover;
-    display: flex;
     min-height: 95vh;
     .payments-page-wrapper {
       display: flex;
+      justify-content: space-between;
       max-width: 1708px;
+      gap: 100px;
       margin: 0 auto;
-      padding: 70px 60px;
+      padding: 70px 100px;
       .marketing-content {
         color: #fff;
         font-family: "Raleway", sans-serif;
@@ -143,6 +145,8 @@
         padding: 32px 24px;
         .form-top-actions {
           display: flex;
+          justify-content: space-between;
+          align-items: center;
           gap: 158px;
           padding: 0px 111.5px;
           .sign-up,
@@ -340,7 +344,6 @@
                 }
                 .limited-time-price {
                   font-weight: 600;
-
                   line-height: 100%;
                   color: #3c4852;
                   letter-spacing: 0.03em;
@@ -444,7 +447,7 @@
       .payments-page-wrapper {
         flex-direction: column;
         .marketing-content {
-          padding: 70px;
+          padding: 0px;
           .marketing-content-heading h1 {
             padding-bottom: 30px;
             font-size: 54px;
@@ -476,13 +479,12 @@
       }
       .form-container {
         margin: 0;
-        width: 100%;
       }
     }
   }
 }
 
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 780px) {
   .App {
     .navbar {
       justify-content: space-between;
@@ -570,20 +572,21 @@
       }
     }
     .payments-page {
-      height: auto;
       .payments-page-wrapper {
-        display: flex;
         flex-direction: column;
+        padding: 0px;
         .marketing-content {
           padding: 30px;
           .marketing-content-heading h1 {
             padding-bottom: 30px;
-            font-size: 50px;
-            .slashedPrice {
-              font-size: 54px;
+            font-size: 24px;
+            .strikedText {
+              .slashedPrice {
+                font-size: 28px;
+              }
             }
             .currentPrice {
-              font-size: 54px;
+              font-size: 28px;
             }
           }
           .plan-benefits-wrapper {
@@ -593,9 +596,9 @@
               }
               li {
                 gap: 20px;
-                padding: 20px 30px;
+                padding: 20px 0px;
                 .plan-benefits-pointers {
-                  font-size: 34px;
+                  font-size: 20px;
                   span {
                     color: #0096ff;
                   }
@@ -607,7 +610,13 @@
       }
       .form-container {
         margin: 0;
-        width: 100%;
+        .form-wrapper {
+          padding: 20px 5px;
+          .form-top-actions {
+            gap: 0px;
+            padding: 0px 30px;
+          }
+        }
       }
     }
   }
