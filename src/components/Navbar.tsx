@@ -11,7 +11,7 @@ export default function Navbar() {
   }
 
   return (
-    <div>
+    <>
       <header className="header">
         <nav className="navbar">
           <img src="EDYODA.png" className="edyoda-logo" alt="Edyoda logo"/>
@@ -48,6 +48,6 @@ export default function Navbar() {
             </div>
         </nav>
       </header>
-    </div>
+    </>
   );
 }

@@ -1,8 +1,12 @@
-import React from "react"
+import React, { useState } from "react";
 import content from "../../content";
+import Subscription from "./Subscription";
 
 const Form = () => {
+  const [planSelectedId, setPlanSelectedId] = useState(2);
   const { subscriptionPlan } = content;
+  const { id, month, totalPrice, perMonthPrice, activePlan } = content.subscriptionPlan;
+  
   return (
     <div className="form-container">
       <div className="form-wrapper">
@@ -20,15 +24,19 @@ const Form = () => {
           <div className="form-header">
             <p>Select your subscription plan</p>
           </div>
-          {subscriptionPlan.map(({ month, totalPrice, perMonthPrice, activePlan, selectedPlan }) => (
-            <Subscription
-              month={month}
-              totalPrice={totalPrice}
-              perMonthPrice={perMonthPrice}
-              activePlan={activePlan}
-              selectedPlan={selectedPlan}
-            />
-          ))}
+          {subscriptionPlan.map(
+            ({ id, month, totalPrice, perMonthPrice, activePlan }) => (
+              <Subscription
+                id={id}
+                month={month}
+                totalPrice={totalPrice}
+                perMonthPrice={perMonthPrice}
+                activePlan={activePlan}
+                planSelectedId={planSelectedId}
+                setPlanSelectedId={setPlanSelectedId}
+              />
+            )
+          )}
           <div className="order-summary">
             <div className="subscription-fee-wrapper">
               <span className="subscription-fee-p">Subscription Fee</span>
@@ -50,7 +58,7 @@ const Form = () => {
               <span className="order-total-text">
                 <b>Total</b> (Incl. of 18% GST)
               </span>
-              <span className="order-total-price">₹149</span>
+              <span className="order-total-price">₹149 </span>
             </div>
           </div>
           <div className="payment-action-buttons">
@@ -66,5 +74,5 @@ const Form = () => {
       </div>
     </div>
   );
-}
+};
 export default Form;

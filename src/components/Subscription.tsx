@@ -1,26 +1,27 @@
 import React, { useState } from "react";
-import { Subscription } from "../types";
 
-const SubscriptionPlans: FunctionComponent<Subscription> = ({
+const Subscription = ({
+  id,
   month,
   totalPrice,
   perMonthPrice,
   activePlan,
-  selectedPlan,
+  planSelectedId,
+  setPlanSelectedId
 }) => {
-  const [planSelected, setPlanSelected] = useState(selectedPlan);
+ 
 
-  function handleClick() {
-    setPlanSelected((!planSelected);
+  function handleClick(id) {
+    setPlanSelectedId(id !== 1 ? id : planSelectedId);
   }
 
   return (
     <div className="subscription-plans-wrapper">
       <div
-        className={`subscription-plans ${planSelected ? "active" : ""} ${
+        className={`subscription-plans ${ planSelectedId === id ? "active" : ""} ${
           activePlan ? "" : "deactive"
         }`}
-        onClick={handleClick}
+        onClick={ () => handleClick(id)}
       >
         {totalPrice == 179 ? (
           <div className="recommended-plan">Recommended</div>
@@ -33,7 +34,7 @@ const SubscriptionPlans: FunctionComponent<Subscription> = ({
               src="deactive.png"
               alt="Green circle with a tick mark inside it"
             />
-          ) : !planSelected ? (
+          ) : !(id === planSelectedId) ? (
             <img
               src="empty-tick.png"
               alt="Green circle with a tick mark inside it"
@@ -61,4 +62,4 @@ const SubscriptionPlans: FunctionComponent<Subscription> = ({
     </div>
   );
 };
-export default SubscriptionPlans;
+export default Subscription;

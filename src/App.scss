@@ -76,18 +76,18 @@
   }
 
   .marketing-content-container {
-    background-image: url(Background.jpg);
+    background-image: url(./assets/Background.jpg);
     background-size: cover;
     display: flex;
-    height: 95vh;
+    min-height: 95vh;
     .marketing-content {
       padding: 70px 144px;
       color: #fff;
       font-family: "Inter", sans-serif;
       font-family: "Poppins", sans-serif;
       font-family: "Raleway", sans-serif;
-      .marketing-content-heading {
-        padding: 0px 25px 25px 0px;
+      .marketing-content-heading h1{
+        padding-bottom: 25px;
         font-size: 56px;
         font-weight: 600;
         letter-spacing: -0.01em;
@@ -132,9 +132,13 @@
       }
     }
     .form-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       background-color: #fff;
       border-radius: 8px;
-      margin: 70px 102px 56px 102px;
+      margin: 70px 102px auto 102px;
       font-family: "Inter", sans-serif;
       font-family: "Poppins", sans-serif;
       font-family: "Raleway", sans-serif;
@@ -143,8 +147,8 @@
         padding: 32px 24px;
         .form-top-actions {
           display: flex;
-          gap: 178px;
-          padding: 0px 127.5px;
+          gap: 158px;
+          padding: 0px 111.5px;
           .sign-up,
           .subscribe {
             display: flex;
@@ -160,10 +164,11 @@
           }
           .one,
           .two {
+            width: 38px;
+            height: 38px;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 7px 10px 8px 10px;
             background-color: #0096ff;
             border-radius: 50%;
             font-weight: 600;
@@ -190,7 +195,7 @@
               display: flex;
               justify-content: space-between;
               align-items: center;
-              padding: 16px;
+              padding: 14px 18px;
               border-radius: 4px;
               background: #fff;
               border: 2px solid #dfdfdf;
@@ -264,7 +269,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 16px;
+            padding: 14px 18px;
             border-radius: 4px;
             background: #d7eddd;
             border: 2px solid #47ba68;
@@ -275,7 +280,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 16px;
+            padding: 14px 18px;
             border-radius: 4px;
             background: #e7e7e7;
             border: 2px solid #bebebe;
@@ -312,7 +317,7 @@
               }
             }
             .limited-time-wrapper {
-              padding: 14.5px 24px;
+              padding: 12px 24px;
               box-sizing: border-box;
               background: linear-gradient(
                 135deg,
@@ -355,8 +360,8 @@
                 display: flex;
                 align-items: center;
                 gap: 10px;
+                padding-top: 6px;
                 .offer-validy-p {
-                  padding-top: 8px;
                   font-weight: 400;
                   font-size: 14px;
                   line-height: 120%;
@@ -423,11 +428,93 @@
     }
   }
 }
+@media screen and (max-width: 1840px) {
+  .App {
+    .marketing-content-container {
+      height: auto;
+      .marketing-content {
+        padding: 70px;
+        .marketing-content-heading {
+          padding-bottom: 30px;
+          font-size: 32px;
+          .slashedPrice {
+            font-size: 38px;
+          }
+          .currentPrice {
+            font-size: 38px;
+          }
+        }
+      }
 
-@media screen and (max-width: 780px) {
+    }
+  }
+}
+
+
+@media screen and (max-width: 1400px) {
   .App {
     .navbar {
-      justify-content: space-between;
+      padding: 4% 6%;
+      .navigation-links {
+        ul {
+          list-style-type: none;
+        }
+        li {
+          gap: 2px;
+        }
+        .navigation-links-left {
+          padding: 0px 24px;
+          gap: 40px;
+        }
+        .navigation-links-right {
+          padding: 0px 24px;
+          gap: 40px;
+      }
+    }}
+    .marketing-content-container {
+      flex-direction: column;
+      height: auto;
+      .marketing-content {
+        padding: 70px;
+        .marketing-content-heading {
+          padding-bottom: 30px;
+          font-size: 32px;
+          .slashedPrice {
+            font-size: 38px;
+          }
+          .currentPrice {
+            font-size: 38px;
+          }
+        }
+        .plan-benefits-wrapper {
+          ul {
+            img {
+              width: 40px;
+            }
+            li {
+              gap: 20px;
+              padding: 20px 30px;
+              .plan-benefits-pointers {
+                font-size: 34px;
+                span {
+                  color: #0096ff;
+                }
+              }
+            }
+          }
+        }
+      }
+      .form-container {
+        margin: 0;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .App {
+    .navbar {
       padding: 4% 6%;
       .edyoda-logo {
         width: 140px;
@@ -518,7 +605,7 @@
       height: auto;
       .marketing-content {
         padding: 30px;
-      .marketing-content-heading {
+        .marketing-content-heading {
           padding-bottom: 30px;
           font-size: 32px;
           .slashedPrice {
