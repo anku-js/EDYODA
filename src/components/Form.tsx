@@ -60,7 +60,7 @@ const Form = () => {
               <div className="offer-validy-wrapper">
                 <img src="Icon-Clock.svg" alt="clock icon" />
                 <span className="offer-validy-p">
-                  Offer calid till 25th March 2023
+                  Offer valid till 25th March 2023
                 </span>
               </div>
             </div>
