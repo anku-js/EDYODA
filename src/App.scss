@@ -86,18 +86,25 @@
       font-family: "Inter", sans-serif;
       font-family: "Poppins", sans-serif;
       font-family: "Raleway", sans-serif;
-      .marketing-content-heading h1{
+      .marketing-content-heading h1 {
         padding-bottom: 25px;
+        padding-right: 55px;
         font-size: 56px;
         font-weight: 600;
         letter-spacing: -0.01em;
-        .slashedPrice {
-          font-family: "Roboto";
-          font-style: normal;
-          font-weight: 600;
-          font-size: 64px;
-          line-height: 125%;
-          letter-spacing: -0.01em;
+        font-style: normal;
+        .strikedText {
+          color: red;
+          text-decoration: line-through;
+          .slashedPrice {
+            color: #fff;
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 64px;
+            line-height: 125%;
+            letter-spacing: -0.01em;
+          }
         }
         .currentPrice {
           font-family: "Roboto";
@@ -138,7 +145,7 @@
       align-items: center;
       background-color: #fff;
       border-radius: 8px;
-      margin: 70px 102px auto 102px;
+      margin: 70px 102px;
       font-family: "Inter", sans-serif;
       font-family: "Poppins", sans-serif;
       font-family: "Raleway", sans-serif;
@@ -319,6 +326,7 @@
             .limited-time-wrapper {
               padding: 12px 24px;
               box-sizing: border-box;
+              border: 2px solid #de4313;              
               background: linear-gradient(
                 135deg,
                 rgba(222, 67, 19, 0.2) 0%,
@@ -338,6 +346,7 @@
                 rgba(248, 169, 84, 0.2) 91.41%,
                 rgba(254, 193, 99, 0.2) 100%
               );
+
               border-radius: 8px;
               .limited-time-header {
                 display: flex;
@@ -433,28 +442,27 @@
     .marketing-content-container {
       height: auto;
       .marketing-content {
-        padding: 70px;
-        .marketing-content-heading {
+        padding-right: 100px;
+        .marketing-content-heading h1 {
           padding-bottom: 30px;
-          font-size: 32px;
+          padding-right: 0px;
+          font-size: 56px;
           .slashedPrice {
-            font-size: 38px;
+            font-size: 64px;
           }
           .currentPrice {
-            font-size: 38px;
+            font-size: 64px;
           }
         }
       }
-
     }
   }
 }
 
-
 @media screen and (max-width: 1400px) {
   .App {
     .navbar {
-      padding: 4% 6%;
+      padding: 13.5px 60px;
       .navigation-links {
         ul {
           list-style-type: none;
@@ -463,27 +471,28 @@
           gap: 2px;
         }
         .navigation-links-left {
-          padding: 0px 24px;
+          padding: 10px 24px;
           gap: 40px;
         }
         .navigation-links-right {
           padding: 0px 24px;
           gap: 40px;
+        }
       }
-    }}
+    }
     .marketing-content-container {
       flex-direction: column;
       height: auto;
       .marketing-content {
         padding: 70px;
-        .marketing-content-heading {
+        .marketing-content-heading h1 {
           padding-bottom: 30px;
-          font-size: 32px;
+          font-size: 54px;
           .slashedPrice {
-            font-size: 38px;
+            font-size: 58px;
           }
           .currentPrice {
-            font-size: 38px;
+            font-size: 58px;
           }
         }
         .plan-benefits-wrapper {
@@ -515,6 +524,7 @@
 @media screen and (max-width: 860px) {
   .App {
     .navbar {
+      justify-content: space-between;
       padding: 4% 6%;
       .edyoda-logo {
         width: 140px;
@@ -605,14 +615,14 @@
       height: auto;
       .marketing-content {
         padding: 30px;
-        .marketing-content-heading {
+        .marketing-content-heading h1 {
           padding-bottom: 30px;
-          font-size: 32px;
+          font-size: 50px;
           .slashedPrice {
-            font-size: 38px;
+            font-size: 54px;
           }
           .currentPrice {
-            font-size: 38px;
+            font-size: 54px;
           }
         }
         .plan-benefits-wrapper {
@@ -624,7 +634,7 @@
               gap: 20px;
               padding: 20px 30px;
               .plan-benefits-pointers {
-                font-size: 26px;
+                font-size: 34px;
                 span {
                   color: #0096ff;
                 }

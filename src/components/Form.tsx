@@ -5,8 +5,16 @@ import Subscription from "./Subscription";
 const Form = () => {
   const [planSelectedId, setPlanSelectedId] = useState(2);
   const { subscriptionPlan } = content;
-  const { id, month, totalPrice, perMonthPrice, activePlan } = content.subscriptionPlan;
-  
+  const { id, month, totalPrice, perMonthPrice, activePlan } =
+    content.subscriptionPlan;
+
+  const selectedPlanObject = subscriptionPlan.filter(
+    (selected) => selected.id === planSelectedId
+  );
+  const selectedPlanPrice = selectedPlanObject[0].totalPrice;
+  const gstPrice = 0.18 * selectedPlanPrice;
+  const priceAfterGst = gstPrice + selectedPlanPrice;
+
   return (
     <div className="form-container">
       <div className="form-wrapper">
@@ -27,6 +35,7 @@ const Form = () => {
           {subscriptionPlan.map(
             ({ id, month, totalPrice, perMonthPrice, activePlan }) => (
               <Subscription
+                key={id}
                 id={id}
                 month={month}
                 totalPrice={totalPrice}
@@ -40,7 +49,9 @@ const Form = () => {
           <div className="order-summary">
             <div className="subscription-fee-wrapper">
               <span className="subscription-fee-p">Subscription Fee</span>
-              <span className="subscription-fee">₹18500</span>
+              <span className="subscription-fee">
+                ₹ {18401 + selectedPlanPrice}
+              </span>
             </div>
             <div className="limited-time-wrapper">
               <div className="limited-time-header">
@@ -58,7 +69,7 @@ const Form = () => {
               <span className="order-total-text">
                 <b>Total</b> (Incl. of 18% GST)
               </span>
-              <span className="order-total-price">₹149 </span>
+              <span className="order-total-price">₹ {selectedPlanPrice} </span>
             </div>
           </div>
           <div className="payment-action-buttons">

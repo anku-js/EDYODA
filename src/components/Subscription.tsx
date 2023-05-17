@@ -7,21 +7,19 @@ const Subscription = ({
   perMonthPrice,
   activePlan,
   planSelectedId,
-  setPlanSelectedId
+  setPlanSelectedId,
 }) => {
- 
-
   function handleClick(id) {
-    setPlanSelectedId(id !== 1 ? id : planSelectedId);
+    setPlanSelectedId(id !== 0 ? id : planSelectedId);
   }
 
   return (
     <div className="subscription-plans-wrapper">
       <div
-        className={`subscription-plans ${ planSelectedId === id ? "active" : ""} ${
-          activePlan ? "" : "deactive"
-        }`}
-        onClick={ () => handleClick(id)}
+        className={`subscription-plans ${
+          planSelectedId === id ? "active" : ""
+        } ${activePlan ? "" : "deactive"}`}
+        onClick={() => handleClick(id)}
       >
         {totalPrice == 179 ? (
           <div className="recommended-plan">Recommended</div>

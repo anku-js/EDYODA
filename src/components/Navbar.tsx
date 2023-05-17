@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { AiOutlineSearch } from "react-icons/ai";
@@ -14,7 +13,7 @@ export default function Navbar() {
     <>
       <header className="header">
         <nav className="navbar">
-          <img src="EDYODA.png" className="edyoda-logo" alt="Edyoda logo"/>
+          <img src="EDYODA.png" className="edyoda-logo" alt="Edyoda logo" />
           <div
             className={`navigation-links ${hamburgerActive ? "active" : ""}`}
           >
@@ -39,13 +38,13 @@ export default function Navbar() {
             </ul>
           </div>
           <div
-              className={`hamburger ${hamburgerActive ? "active" : ""}`}
-              onClick={handleClick}
-            >
-              <span className="bar"></span>
-              <span className="bar"></span>
-              <span className="bar"></span>
-            </div>
+            className={`hamburger ${hamburgerActive ? "active" : ""}`}
+            onClick={handleClick}
+          >
+            <span className="bar"></span>
+            <span className="bar"></span>
+            <span className="bar"></span>
+          </div>
         </nav>
       </header>
     </>
