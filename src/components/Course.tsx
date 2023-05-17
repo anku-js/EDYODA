@@ -1,3 +1,4 @@
+import React from "react"
 import Form from "./Form";
 import content from "../../content";
 
@@ -11,7 +12,7 @@ export default function Course() {
             <p>
               Access curated courses worth{" "}
               <span className="slashedPrice">₹ <s>{slashedPrice}</s></span> at just{" "}
-              <span className="currentPrice">{currentPrice}</span> per year!
+              <span className="currentPrice">₹ {currentPrice}</span> per year!
             </p>
           </div>
           <div className="plan-benefits-wrapper">

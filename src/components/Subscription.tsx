@@ -1,16 +1,17 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import { Subscription } from "../types";
 
-export default function Subscription({
+const SubscriptionPlans: FunctionComponent<Subscription> = ({
   month,
   totalPrice,
   perMonthPrice,
   activePlan,
   selectedPlan,
-}) {
+}) => {
   const [planSelected, setPlanSelected] = useState(selectedPlan);
 
   function handleClick() {
-    setPlanSelected(planSelected => !planSelected);
+    setPlanSelected((!planSelected);
   }
 
   return (
@@ -59,4 +60,5 @@ export default function Subscription({
       </div>
     </div>
   );
-}
+};
+export default SubscriptionPlans;

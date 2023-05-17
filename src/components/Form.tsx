@@ -1,9 +1,8 @@
-import Subscription from "./Subscription";
+import React from "react"
 import content from "../../content";
 
-export default function Form() {
+const Form = () => {
   const { subscriptionPlan } = content;
-  console.log(subscriptionPlan);
   return (
     <div className="form-container">
       <div className="form-wrapper">
@@ -68,3 +67,4 @@ export default function Form() {
     </div>
   );
 }
+export default Form;
