@@ -487,7 +487,7 @@
   .App {
     .navbar {
       justify-content: space-between;
-      padding: 4% 6%;
+      padding: 10px 20px;
       .edyoda-logo {
         width: 140px;
       }
@@ -573,7 +573,8 @@
     .payments-page {
       .payments-page-wrapper {
         flex-direction: column;
-        padding: 0px;
+        padding: 0;
+        padding-bottom: 30px;
         .marketing-content {
           padding: 30px;
           .marketing-content-heading h1 {
