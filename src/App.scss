@@ -4,9 +4,6 @@
 }
 
 .App {
-  font-family: "Inter", sans-serif;
-  font-family: "Poppins", sans-serif;
-  font-family: "Raleway", sans-serif;
   .navbar {
     display: flex;
     align-items: center;
@@ -23,11 +20,8 @@
         display: flex;
         align-items: center;
         gap: 18px;
-        font-size: 16px;
         font-weight: 500;
         line-height: 19px;
-        font-family: "Inter", sans-serif;
-        font-family: "Poppins", sans-serif;
         font-family: "Raleway", sans-serif;
       }
       .navigation-links-left {
@@ -54,8 +48,6 @@
           );
           color: #fff;
           line-height: 19px;
-          font-family: "Inter", sans-serif;
-          font-family: "Poppins", sans-serif;
           font-family: "Raleway", sans-serif;
         }
       }
@@ -83,8 +75,6 @@
     .marketing-content {
       padding: 70px 144px;
       color: #fff;
-      font-family: "Inter", sans-serif;
-      font-family: "Poppins", sans-serif;
       font-family: "Raleway", sans-serif;
       .marketing-content-heading h1 {
         padding-bottom: 25px;
@@ -92,14 +82,12 @@
         font-size: 56px;
         font-weight: 600;
         letter-spacing: -0.01em;
-        font-style: normal;
         .strikedText {
           color: red;
           text-decoration: line-through;
           .slashedPrice {
             color: #fff;
             font-family: "Roboto";
-            font-style: normal;
             font-weight: 600;
             font-size: 64px;
             line-height: 125%;
@@ -108,7 +96,6 @@
         }
         .currentPrice {
           font-family: "Roboto";
-          font-style: normal;
           font-weight: 600;
           font-size: 64px;
           line-height: 125%;
@@ -122,7 +109,7 @@
           li {
             display: flex;
             align-items: center;
-            gap: 78px;
+            gap: 68px;
             padding: 25px 0;
             .plan-benefits-pointers {
               font-family: "Roboto";
@@ -146,9 +133,6 @@
       background-color: #fff;
       border-radius: 8px;
       margin: 70px 102px;
-      font-family: "Inter", sans-serif;
-      font-family: "Poppins", sans-serif;
-      font-family: "Raleway", sans-serif;
       font-family: "Roboto", sans-serif;
       .form-wrapper {
         padding: 32px 24px;
@@ -162,11 +146,9 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            font-weight: 400;
             font-size: 16px;
             line-height: 19px;
             width: 60px;
-            font-weight: 400;
             color: #3c4852;
           }
           .one,
@@ -232,7 +214,6 @@
                 gap: 14px;
                 label {
                   font-weight: 600;
-                  font-size: 16px;
                   line-height: 120%;
                   color: #3c4852;
                   cursor: pointer;
@@ -244,18 +225,16 @@
               }
               .payment-details {
                 .total {
-                  font-weight: 400;
                   font-size: 12px;
                   color: #3c4852;
                 }
                 .total-price {
                   font-weight: 600;
-                  font-size: 16px;
+
                   line-height: 120%;
                   margin-left: 8px;
                 }
                 .price-per-month {
-                  font-weight: 400;
                   font-size: 12px;
                   color: #3c4852;
                   margin-left: 20px;
@@ -310,14 +289,11 @@
               justify-content: space-between;
               align-items: center;
               .subscription-fee-p {
-                font-weight: 400;
-                font-size: 16px;
                 line-height: 120%;
                 color: #3c4852;
               }
               .subscription-fee {
                 font-weight: 500;
-                font-size: 16px;
                 line-height: 100%;
                 color: #3c4852;
                 letter-spacing: 0.03em;
@@ -353,13 +329,13 @@
                 justify-content: space-between;
                 .limited-time-text {
                   font-weight: 600;
-                  font-size: 16px;
+
                   line-height: 120%;
                   color: #de4313;
                 }
                 .limited-time-price {
                   font-weight: 600;
-                  font-size: 16px;
+
                   line-height: 100%;
                   color: #3c4852;
                   letter-spacing: 0.03em;
@@ -371,7 +347,6 @@
                 gap: 10px;
                 padding-top: 6px;
                 .offer-validy-p {
-                  font-weight: 400;
                   font-size: 14px;
                   line-height: 120%;
                   color: #de4313;
@@ -384,7 +359,6 @@
               justify-content: space-between;
               align-items: center;
               .order-total-text {
-                font-size: 16px;
                 line-height: 120%;
                 color: #3c4852;
               }

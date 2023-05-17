@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { AiOutlineSearch } from "react-icons/ai";
 
-export default function Navbar() {
+const Navbar = () => {
   const [hamburgerActive, setHamburgerActive] = useState(false);
 
   function handleClick() {
@@ -49,4 +49,6 @@ export default function Navbar() {
       </header>
     </>
   );
-}
+};
+
+export default Navbar;

@@ -1,19 +1,18 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import content from "../../content";
 import Subscription from "./Subscription";
 
 const Form = () => {
-  const [planSelectedId, setPlanSelectedId] = useState(2);
+  const [planSelectedId, setPlanSelectedId] = useState(1);
   const { subscriptionPlan } = content;
-  const { id, month, totalPrice, perMonthPrice, activePlan } =
-    content.subscriptionPlan;
 
-  const selectedPlanObject = subscriptionPlan.filter(
-    (selected) => selected.id === planSelectedId
-  );
-  const selectedPlanPrice = selectedPlanObject[0].totalPrice;
-  const gstPrice = 0.18 * selectedPlanPrice;
-  const priceAfterGst = gstPrice + selectedPlanPrice;
+  let selectedPlanPrice = 0;
+
+  subscriptionPlan.forEach(({ id, totalPrice }) => {
+    if (id === planSelectedId) {
+      selectedPlanPrice = totalPrice;
+    }
+  });
 
   return (
     <div className="form-container">

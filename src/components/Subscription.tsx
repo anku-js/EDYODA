@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { Subscription as SubscriptionType } from "../types";
 
 const Subscription = ({
   id,
@@ -8,8 +8,9 @@ const Subscription = ({
   activePlan,
   planSelectedId,
   setPlanSelectedId,
-}) => {
-  function handleClick(id) {
+}: SubscriptionType) => {
+  
+  function handleClick(id: number) {
     setPlanSelectedId(id !== 0 ? id : planSelectedId);
   }
 
@@ -28,10 +29,7 @@ const Subscription = ({
         )}
         <div className="subscription-duration">
           {!activePlan ? (
-            <img
-              src="deactive.png"
-              alt="Grey circle with a circle inside it"
-            />
+            <img src="deactive.png" alt="Grey circle with a circle inside it" />
           ) : !(id === planSelectedId) ? (
             <img
               src="empty-tick.png"

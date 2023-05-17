@@ -1,8 +1,7 @@
-import React from "react";
 import Form from "./Form";
 import content from "../../content";
 
-export default function Course() {
+const Course = () => {
   const { slashedPrice, currentPrice } = content.heroText;
   const { pointers } = content;
 
@@ -37,4 +36,6 @@ export default function Course() {
       </div>
     </section>
   );
-}
+};
+
+export default Course;
