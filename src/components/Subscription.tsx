@@ -30,7 +30,7 @@ const Subscription = ({
           {!activePlan ? (
             <img
               src="deactive.png"
-              alt="Green circle with a tick mark inside it"
+              alt="Grey circle with a circle inside it"
             />
           ) : !(id === planSelectedId) ? (
             <img
