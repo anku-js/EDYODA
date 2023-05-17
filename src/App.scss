@@ -77,7 +77,6 @@
       display: flex;
       justify-content: space-between;
       max-width: 1708px;
-      gap: 100px;
       margin: 0 auto;
       padding: 70px 100px;
       .marketing-content {
@@ -610,6 +609,7 @@
       }
       .form-container {
         margin: 0;
+        width: 100%;
         .form-wrapper {
           padding: 20px 5px;
           .form-top-actions {
