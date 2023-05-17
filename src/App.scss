@@ -7,7 +7,9 @@
   .navbar {
     display: flex;
     align-items: center;
-    padding: 13.5px 106.5px;
+    max-width: 1708px;
+    margin: 0 auto;
+    padding: 14px 60px;
     .navigation-links {
       width: 100%;
       display: flex;
@@ -33,7 +35,6 @@
       .navigation-links-right {
         display: flex;
         align-items: center;
-        padding: 0px 40px;
         gap: 80px;
         .join-button {
           padding: 0.5em 2em;
@@ -67,58 +68,63 @@
     }
   }
 
-  .marketing-content-container {
+  .payments-page {
     background-image: url(./assets/Background.jpg);
     background-size: cover;
     display: flex;
     min-height: 95vh;
-    .marketing-content {
-      padding: 70px 144px;
-      color: #fff;
-      font-family: "Raleway", sans-serif;
-      .marketing-content-heading h1 {
-        padding-bottom: 25px;
-        padding-right: 55px;
-        font-size: 56px;
-        font-weight: 600;
-        letter-spacing: -0.01em;
-        .strikedText {
-          color: red;
-          text-decoration: line-through;
-          .slashedPrice {
-            color: #fff;
+    .payments-page-wrapper {
+      display: flex;
+      max-width: 1708px;
+      margin: 0 auto;
+      padding: 70px 60px;
+      .marketing-content {
+        color: #fff;
+        font-family: "Raleway", sans-serif;
+        .marketing-content-heading h1 {
+          max-width: 800px;
+          padding-bottom: 25px;
+          font-size: 56px;
+          font-weight: 600;
+          letter-spacing: -0.01em;
+          .strikedText {
+            color: red;
+            text-decoration: line-through;
+            .slashedPrice {
+              color: #fff;
+              font-family: "Roboto";
+              font-weight: 600;
+              font-size: 64px;
+              line-height: 125%;
+              letter-spacing: -0.01em;
+            }
+          }
+          .currentPrice {
             font-family: "Roboto";
             font-weight: 600;
             font-size: 64px;
             line-height: 125%;
             letter-spacing: -0.01em;
+            color: #0096ff;
           }
         }
-        .currentPrice {
-          font-family: "Roboto";
-          font-weight: 600;
-          font-size: 64px;
-          line-height: 125%;
-          letter-spacing: -0.01em;
-          color: #0096ff;
-        }
-      }
-      .plan-benefits-wrapper {
-        ul {
-          list-style: none;
-          li {
-            display: flex;
-            align-items: center;
-            gap: 68px;
-            padding: 25px 0;
-            .plan-benefits-pointers {
-              font-family: "Roboto";
-              font-weight: 600;
-              font-size: 32px;
-              line-height: 100%;
-              letter-spacing: 0.03em;
-              span {
-                color: #0096ff;
+        .plan-benefits-wrapper {
+          ul {
+            list-style: none;
+            li {
+              display: flex;
+              align-items: center;
+              gap: 68px;
+              padding: 25px 0;
+              .plan-benefits-pointers {
+                font-family: "Roboto";
+                font-weight: 600;
+                font-size: 32px;
+                line-height: 100%;
+                letter-spacing: 0.03em;
+                span {
+                  color: #0096ff;
+                }
               }
             }
           }
@@ -130,11 +136,10 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background-color: #fff;
-      border-radius: 8px;
-      margin: 70px 102px;
       font-family: "Roboto", sans-serif;
       .form-wrapper {
+        background-color: #fff;
+        border-radius: 8px;
         padding: 32px 24px;
         .form-top-actions {
           display: flex;
@@ -302,7 +307,7 @@
             .limited-time-wrapper {
               padding: 12px 24px;
               box-sizing: border-box;
-              border: 2px solid #de4313;              
+              border: 2px solid #de4313;
               background: linear-gradient(
                 135deg,
                 rgba(222, 67, 19, 0.2) 0%,
@@ -411,27 +416,6 @@
     }
   }
 }
-@media screen and (max-width: 1840px) {
-  .App {
-    .marketing-content-container {
-      height: auto;
-      .marketing-content {
-        padding-right: 100px;
-        .marketing-content-heading h1 {
-          padding-bottom: 30px;
-          padding-right: 0px;
-          font-size: 56px;
-          .slashedPrice {
-            font-size: 64px;
-          }
-          .currentPrice {
-            font-size: 64px;
-          }
-        }
-      }
-    }
-  }
-}
 
 @media screen and (max-width: 1400px) {
   .App {
@@ -454,33 +438,36 @@
         }
       }
     }
-    .marketing-content-container {
+    .payments-page {
       flex-direction: column;
       height: auto;
-      .marketing-content {
-        padding: 70px;
-        .marketing-content-heading h1 {
-          padding-bottom: 30px;
-          font-size: 54px;
-          .slashedPrice {
-            font-size: 58px;
-          }
-          .currentPrice {
-            font-size: 58px;
-          }
-        }
-        .plan-benefits-wrapper {
-          ul {
-            img {
-              width: 40px;
+      .payments-page-wrapper {
+        flex-direction: column;
+        .marketing-content {
+          padding: 70px;
+          .marketing-content-heading h1 {
+            padding-bottom: 30px;
+            font-size: 54px;
+            .slashedPrice {
+              font-size: 58px;
             }
-            li {
-              gap: 20px;
-              padding: 20px 30px;
-              .plan-benefits-pointers {
-                font-size: 34px;
-                span {
-                  color: #0096ff;
+            .currentPrice {
+              font-size: 58px;
+            }
+          }
+          .plan-benefits-wrapper {
+            ul {
+              img {
+                width: 40px;
+              }
+              li {
+                gap: 20px;
+                padding: 20px 30px;
+                .plan-benefits-pointers {
+                  font-size: 34px;
+                  span {
+                    color: #0096ff;
+                  }
                 }
               }
             }
@@ -579,38 +566,39 @@
         );
         color: #fff;
         line-height: 19px;
-        font-family: "Inter", sans-serif;
-        font-family: "Poppins", sans-serif;
         font-family: "Raleway", sans-serif;
       }
     }
-    .marketing-content-container {
-      flex-direction: column;
+    .payments-page {
       height: auto;
-      .marketing-content {
-        padding: 30px;
-        .marketing-content-heading h1 {
-          padding-bottom: 30px;
-          font-size: 50px;
-          .slashedPrice {
-            font-size: 54px;
-          }
-          .currentPrice {
-            font-size: 54px;
-          }
-        }
-        .plan-benefits-wrapper {
-          ul {
-            img {
-              width: 40px;
+      .payments-page-wrapper {
+        display: flex;
+        flex-direction: column;
+        .marketing-content {
+          padding: 30px;
+          .marketing-content-heading h1 {
+            padding-bottom: 30px;
+            font-size: 50px;
+            .slashedPrice {
+              font-size: 54px;
             }
-            li {
-              gap: 20px;
-              padding: 20px 30px;
-              .plan-benefits-pointers {
-                font-size: 34px;
-                span {
-                  color: #0096ff;
+            .currentPrice {
+              font-size: 54px;
+            }
+          }
+          .plan-benefits-wrapper {
+            ul {
+              img {
+                width: 40px;
+              }
+              li {
+                gap: 20px;
+                padding: 20px 30px;
+                .plan-benefits-pointers {
+                  font-size: 34px;
+                  span {
+                    color: #0096ff;
+                  }
                 }
               }
             }
